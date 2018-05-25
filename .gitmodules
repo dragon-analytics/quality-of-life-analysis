@@ -1,0 +1,3 @@
+[submodule "docker_test/MongoConda"]
+	path = docker_test/MongoConda
+	url = git@github.com:juandados/MongoConda.git
