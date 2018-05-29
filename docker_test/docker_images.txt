@@ -4,3 +4,4 @@ New notebook: import pymongo
 cd MongoConda
 docker-compuse build
 docker ps
+docker ps | grep mongoconda_web | awk '{print $1}'
