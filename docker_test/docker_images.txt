@@ -3,3 +3,4 @@ New Terminal: pip install pymongo
 New notebook: import pymongo
 cd MongoConda
 docker-compuse build
+docker ps
