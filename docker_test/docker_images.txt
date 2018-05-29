@@ -5,3 +5,4 @@ cd MongoConda
 docker-compuse build
 docker ps
 contid=$(docker ps | grep mongoconda_web | awk '{print $1}')
+docker exec $contid cat /root/.local/share/jupyter/runtime/nbserver-5.json >> nbserver-5.json
