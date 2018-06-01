@@ -5,10 +5,7 @@ services:
     env_file: .env
     #volumes:
      # - ./:/mediapy
-    command: bash -c "mkdir -p mediapy/notebooks && 
-                      /opt/conda/bin/jupyter notebook --notebook-dir=mediapy/notebooks --ip='*' --port=8888 --no-browser --NotebookApp.token=github --allow-root &&
-                      chmod u+x exec01.sh &&
-                      ./exec01.sh" 
+    command: bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=mediapy/notebooks --ip='*' --port=8888 --no-browser --NotebookApp.token=github --allow-root" 
     ports:
       - 8888:8888
       - 5000:5000

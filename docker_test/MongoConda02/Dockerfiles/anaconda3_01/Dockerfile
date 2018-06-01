@@ -24,6 +24,13 @@ RUN conda install -c anaconda pymongo
 RUN conda install -c conda-forge jupyter_nbextensions_configurator
 RUN conda install -c conda-forge jupyter_contrib_nbextensions
 RUN conda update scikit-learn
+RUN mkdir -p mediapy/notebooks
+RUN git clone --no-checkout https://github.com/dragon-analytics/quality-of-life-analysis.git mediapy/notebooks/notebook.tmp
+RUN mv mediapy/notebooks/notebook.tmp/.git mediapy/notebooks/
+RUN rmdir mediapy/notebooks/notebook.tmp
+RUN cd mediapy/notebooks
+RUN git reset --hard HEAD
+
 
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
